@@ -61,3 +61,17 @@ catalog = {
 for prod, info in catalog.items():
     if info["stock"] < 20:
         print(f"LOW STOCK: {prod}")
+# --- Exercise 8 ---
+transactions = [
+    {"region": "South", "amount": 300},
+    {"region": "North", "amount": 150},
+    {"region": "South", "amount": 200}
+]
+summary = {}
+for tx in transactions:
+    reg = tx["region"]
+    amt = tx["amount"]
+    summary[reg] = summary.get(reg, 0) + amt
+
+for reg in sorted(summary.keys()):
+    print(f"{reg}: {summary[reg]}")
