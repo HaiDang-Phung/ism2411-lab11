@@ -26,3 +26,8 @@ customer["tier"] = "platinum"
 print(customer)
 del customer["email"]
 print(customer)
+print(customer.get("email", "no email on file"))
+try:
+    print(customer["email"])
+except KeyError:
+    print("KeyError caught")
