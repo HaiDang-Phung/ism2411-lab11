@@ -31,3 +31,6 @@ try:
     print(customer["email"])
 except KeyError:
     print("KeyError caught")
+for k, v in customer.items():
+    print(f"{k}: {v}")
+# Iterating without .items() only loops through keys, while .items() gives both keys and values.
