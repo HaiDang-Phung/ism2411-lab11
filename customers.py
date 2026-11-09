@@ -53,3 +53,11 @@ customers = [
 for c in customers:
     disc = tier_discounts.get(c["tier"], 0)
     print(c["name"], c["tier"], disc)
+# --- Exercise 7 ---
+catalog = {
+    "Widget A": {"price": 9.99, "stock": 150},
+    "Gadget C": {"price": 49.99, "stock": 8}
+}
+for prod, info in catalog.items():
+    if info["stock"] < 20:
+        print(f"LOW STOCK: {prod}")
