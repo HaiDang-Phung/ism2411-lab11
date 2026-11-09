@@ -44,3 +44,12 @@ tier = customer["tier"]
 discount = tier_discounts.get(tier, 0)
 final_price = 200 * (1 - discount)
 print(tier, discount, final_price)
+# --- Exercise 6 ---
+customers = [
+    {"name": "Alice", "tier": "platinum"},
+    {"name": "Bob", "tier": "silver"},
+    {"name": "Charlie", "tier": "bronze"}
+]
+for c in customers:
+    disc = tier_discounts.get(c["tier"], 0)
+    print(c["name"], c["tier"], disc)
